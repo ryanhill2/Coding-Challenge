@@ -1,5 +1,7 @@
 package GenesysCodingChallenge.GenesysCodingChallenge.Students;
 
+import GenesysCodingChallenge.GenesysCodingChallenge.Courses.Course;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
@@ -22,7 +24,7 @@ public class Student {
     private String Address;
 
     @ManyToMany(mappedBy = "Student")
-    public static List<Optional<GenesysCodingChallenge.GenesysCodingChallenge.Courses.Course>> Course;
+    public static List<GenesysCodingChallenge.GenesysCodingChallenge.Courses.Course> Course;
 
     Student(){
     }

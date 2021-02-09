@@ -21,10 +21,10 @@ public class Course {
     private String Semester = null;
 
     @OneToOne
-    public static Professor Professor;
+    public static Optional<GenesysCodingChallenge.GenesysCodingChallenge.Professors.Professor> Professor = null;
 
     @ManyToMany
-    public static List<Student> Student;
+    public static List<Student> Student = null;
 
     Course(){
     }

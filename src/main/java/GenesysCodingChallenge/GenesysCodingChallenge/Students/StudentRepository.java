@@ -9,8 +9,4 @@ import java.util.Optional;
 
 @Repository
 public interface StudentRepository extends CrudRepository<Student, Long> {
-    @Query(
-            value = "SELECT * FROM student WHERE id = ?1",
-            nativeQuery = true)
-    Student findSById(Long id);
 }

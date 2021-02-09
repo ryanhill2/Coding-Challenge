@@ -1,6 +1,7 @@
 package GenesysCodingChallenge.GenesysCodingChallenge.AssignCourse;
 
 import GenesysCodingChallenge.GenesysCodingChallenge.Courses.Course;
+import GenesysCodingChallenge.GenesysCodingChallenge.Professors.Professor;
 import GenesysCodingChallenge.GenesysCodingChallenge.Students.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -13,14 +14,12 @@ public class AssignCourseController {
     @Autowired
     private AssignCourseService assignCourseService;
 
-//    @PatchMapping(value = "/course/{id}")
-//    public @RequestBody void assignProfessorCourse(@PathVariable Long id, @RequestBody
-//            Map<Object, Object> fields) {
-//        fields.forEach((k, v) -> {
-//
-//        }
-//        return assignCourseService.assignProfessorCourse(course);
-//    }
+    @PatchMapping(value = "/Professor/{p_id}/course/{c_id}")
+    public String assignProfessorCourse(
+            @PathVariable Long p_id,
+            @PathVariable Long c_id){
+        return assignCourseService.assignProfessorCourse(p_id, c_id);
+    }
 
     @PatchMapping(value = "/student/{s_id}/course/{c_id}")
     public Optional<Course> assignStudentCourse(

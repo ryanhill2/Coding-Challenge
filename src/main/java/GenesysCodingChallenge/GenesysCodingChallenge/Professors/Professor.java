@@ -5,6 +5,7 @@ import GenesysCodingChallenge.GenesysCodingChallenge.Courses.Course;
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @Entity
 public class Professor{
@@ -23,7 +24,7 @@ public class Professor{
     private String Department;
 
     @OneToOne(mappedBy = "Professor")
-    public static Course Course;
+    public static Optional<GenesysCodingChallenge.GenesysCodingChallenge.Courses.Course> Course;
 
     Professor(){
     }
