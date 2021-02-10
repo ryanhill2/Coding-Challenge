@@ -12,78 +12,79 @@ public class Course {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
 
-    private String CourseName = null;
-    private String CourseCode = null;
-    private String Description = null;
-    private Long Credits = null;
-    private String Semester = null;
-
+    private String courseName = null;
+    private String courseCode = null;
+    private String description = null;
+    private Long credits = null;
+    private String semester = null;
     @OneToOne
-    public static Optional<GenesysCodingChallenge.GenesysCodingChallenge.Professors.Professor> Professor = null;
+    @JoinColumn
+    public Professor professor = null;
 
     @ManyToMany
-    public static List<Student> Student = null;
+    @JoinColumn
+    public List<Student> students = null;
 
     Course(){
     }
 
-    public Course(Long Id, String  CourseName, String CourseCode, String Description, Long Credits, String Semester){
-        this.Id = Id;
-        this.CourseName = CourseName;
-        this.CourseCode = CourseCode;
-        this.Description = Description;
-        this.Credits = Credits;
-        this.Semester = Semester;
+    public Course(Long id, String  courseName, String courseCode, String description, Long credits, String semester, Professor professor){
+        this.id = id;
+        this.courseName = courseName;
+        this.courseCode = courseCode;
+        this.description = description;
+        this.credits = credits;
+        this.semester = semester;
+        this.professor = professor;
     }
 
     public Long getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Long id) {
-        Id = id;
+        id = id;
     }
 
     public String getCourseName() {
-        return CourseName;
+        return courseName;
     }
 
     public void setCourseName(String courseName) {
-        this.CourseName = courseName;
+        this.courseName = courseName;
     }
 
     public String getCourseCode() {
-        return CourseCode;
+        return courseCode;
     }
 
     public void setCourseCode(String courseCode) {
-        this.CourseCode = courseCode;
+        this.courseCode = courseCode;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String description) {
-        Description = description;
+        this.description = description;
     }
 
     public Long getCredits() {
-        return Credits;
+        return credits;
     }
 
     public void setCredits(Long credits) {
-        this.Credits = credits;
+        this.credits = credits;
     }
 
     public String getSemester() {
-        return Semester;
+        return semester;
     }
 
     public void setSemester(String semester) {
-        this.Semester = semester;
+        this.semester = semester;
     }
-
 }

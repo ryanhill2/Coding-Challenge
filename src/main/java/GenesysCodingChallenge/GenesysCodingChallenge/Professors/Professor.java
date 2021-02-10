@@ -13,33 +13,33 @@ public class Professor{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
 
-    private String FirstName;
-    private String SurName;
-    private Long ProfessorsId;
-    private String ProfessorsEmail;
-    private Date StartDate;
-    private String Title;
-    private Date DOB;
-    private String Phone;
-    private String Department;
+    private String firstName;
+    private String surName;
+    private Long professorsId;
+    private String professorsEmail;
+    private Date startDate;
+    private String title;
+    private Date dob;
+    private String phone;
+    private String department;
 
-    @OneToOne(mappedBy = "Professor")
-    public static Optional<GenesysCodingChallenge.GenesysCodingChallenge.Courses.Course> Course;
+//    @OneToOne(mappedBy = "Professors")
+//    public static Optional<GenesysCodingChallenge.GenesysCodingChallenge.Courses.Course> Course;
 
     Professor(){
     }
 
-    public Professor(Long Id, String FirstName, String SurName, Long ProfessorsId, String ProfessorsEmail, Date StartDate, String Title, Date DOB, String Phone, String Department) {
+    public Professor(Long id, String firstName, String surName, Long professorsId, String professorsEmail, Date startDate, String title, Date dob, String phone, String department) {
         this.Id = Id;
-        this.FirstName = FirstName;
-        this.SurName = SurName;
-        this.ProfessorsId = ProfessorsId;
-        this.ProfessorsEmail = ProfessorsEmail;
-        this.StartDate = StartDate;
-        this.Title = Title;
-        this.DOB = DOB;
-        this.Phone = Phone;
-        this.Department = Department;
+        this.firstName = firstName;
+        this.surName = surName;
+        this.professorsId = professorsId;
+        this.professorsEmail = professorsEmail;
+        this.startDate = startDate;
+        this.title = title;
+        this.dob = dob;
+        this.phone = phone;
+        this.department = department;
     }
 
     public Long getId() {
@@ -51,75 +51,74 @@ public class Professor{
     }
 
     public String getFirstName() {
-        return FirstName;
+        return firstName;
     }
 
     public void setFirstName(String firstName) {
-        FirstName = firstName;
+        this.firstName = firstName;
     }
 
     public String getSurName() {
-        return SurName;
+        return surName;
     }
 
     public void setSurName(String surName) {
-        SurName = surName;
+        this.surName = surName;
     }
 
     public Long getProfessorsId() {
-        return ProfessorsId;
+        return professorsId;
     }
 
     public void setProfessorsId(Long professorsId) {
-        ProfessorsId = professorsId;
+        this.professorsId = professorsId;
     }
 
     public String getProfessorsEmail() {
-        return ProfessorsEmail;
+        return professorsEmail;
     }
 
     public void setProfessorsEmail(String professorsEmail) {
-        ProfessorsEmail = professorsEmail;
+        this.professorsEmail = professorsEmail;
     }
 
     public Date getStartDate() {
-        return StartDate;
+        return startDate;
     }
 
     public void setStartDate(Date startDate) {
-        StartDate = startDate;
+        this.startDate = startDate;
     }
 
     public String getTitle() {
-        return Title;
+        return title;
     }
 
     public void setTitle(String title) {
-        Title = title;
+        this.title = title;
     }
 
-    public Date getDOB() {
-        return DOB;
+    public Date getDob() {
+        return dob;
     }
 
-    public void setDOB(Date DOB) {
-        this.DOB = DOB;
+    public void setDob(Date dob) {
+        this.dob = dob;
     }
 
     public String getPhone() {
-        return Phone;
+        return phone;
     }
 
     public void setPhone(String phone) {
-        Phone = phone;
+        this.phone = phone;
     }
 
     public String getDepartment() {
-        return Department;
+        return department;
     }
 
     public void setDepartment(String department) {
-        Department = department;
+        this.department = department;
     }
-
 }

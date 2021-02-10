@@ -11,115 +11,115 @@ import java.util.Optional;
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
 
-    private String FirstName;
-    private String SurName;
-    private Long StudentId;
-    private String StudentEmail;
-    private Date StartDate;
-    private Date EndDate;
-    private Date DOB;
-    private String Phone;
-    private String Address;
+    private String firstName;
+    private String surName;
+    private Long studentId;
+    private String studentEmail;
+    private Date startDate;
+    private Date endDate;
+    private Date dob;
+    private String phone;
+    private String address;
 
-    @ManyToMany(mappedBy = "Student")
-    public static List<GenesysCodingChallenge.GenesysCodingChallenge.Courses.Course> Course;
+//    @ManyToMany(mappedBy = "Student")
+//    public static List<GenesysCodingChallenge.GenesysCodingChallenge.Courses.Course> Course;
 
     Student(){
     }
 
-    public Student(Long Id, String FirstName, String SurName, Long StudentId, String StudentEmail, Date StartDate, Date EndDate, Date DOB, String Phone, String Address) {
-        this.Id = Id;
-        this.FirstName = FirstName;
-        this.SurName = SurName;
-        this.StudentId = StudentId;
-        this.StudentEmail = StudentEmail;
-        this.StartDate = StartDate;
-        this.EndDate = EndDate;
-        this.DOB = DOB;
-        this.Phone = Phone;
-        this.Address = Address;
+    public Student(Long id, String firstName, String surName, Long studentId, String studentEmail, Date startDate, Date endDate, Date dob, String phone, String address) {
+        this.id = id;
+        this.firstName = firstName;
+        this.surName = surName;
+        this.studentId = studentId;
+        this.studentEmail = studentEmail;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.dob = dob;
+        this.phone = phone;
+        this.address = address;
     }
 
     public Long getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Long id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getFirstName() {
-        return FirstName;
+        return firstName;
     }
 
     public void setFirstName(String firstName) {
-        FirstName = firstName;
+        this.firstName = firstName;
     }
 
     public String getSurName() {
-        return SurName;
+        return surName;
     }
 
     public void setSurName(String surName) {
-        SurName = surName;
+        this.surName = surName;
     }
 
     public Long getStudentId() {
-        return StudentId;
+        return studentId;
     }
 
     public void setStudentId(Long studentId) {
-        StudentId = studentId;
+        this.studentId = studentId;
     }
 
     public String getStudentEmail() {
-        return StudentEmail;
+        return studentEmail;
     }
 
     public void setStudentEmail(String studentEmail) {
-        StudentEmail = studentEmail;
+        this.studentEmail = studentEmail;
     }
 
     public Date getStartDate() {
-        return StartDate;
+        return startDate;
     }
 
     public void setStartDate(Date startDate) {
-        StartDate = startDate;
+        this.startDate = startDate;
     }
 
     public Date getEndDate() {
-        return EndDate;
+        return endDate;
     }
 
     public void setEndDate(Date endDate) {
-        EndDate = endDate;
+        this.endDate = endDate;
     }
 
-    public Date getDOB() {
-        return DOB;
+    public Date getDob() {
+        return dob;
     }
 
-    public void setDOB(Date DOB) {
-        this.DOB = DOB;
+    public void setDob(Date dob) {
+        this.dob = dob;
     }
 
     public String getPhone() {
-        return Phone;
+        return phone;
     }
 
     public void setPhone(String phone) {
-        Phone = phone;
+        this.phone = phone;
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
     public void setAddress(String address) {
-        Address = address;
+        this.address = address;
     }
 }
 
